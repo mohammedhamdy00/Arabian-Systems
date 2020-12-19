@@ -18,26 +18,26 @@ export default class Home extends React.Component<RouteComponentProps<any>, ISta
         return (
             <div>
                 <MDBContainer className="homeContainer">
-<MDBRow>
-<div className="actionBtns">
-<Link to={`pageone`} >
-                        <button className="navBtn">
-                            Go to Pageone
+                    <MDBRow>
+                        <div className="actionBtns">
+                            <Link to={`pageone`} >
+                                <button className="navBtn">
+                                    Go to Pageone
                     </button>
-                    </Link>
-                    <Link to={`pagetwo`} >
-                        <button className="navBtn">
-                            Go to Pagetwo
+                            </Link>
+                            <Link to={`pagetwo`} >
+                                <button className="navBtn">
+                                    Go to Pagetwo
                     </button>
-                    </Link>
-                    <Link to={`pagethree`} >
-                        <button className="navBtn">
-                            Go to Pagethree
+                            </Link>
+                            <Link to={`pagethree`} >
+                                <button className="navBtn">
+                                    Go to Pagethree
                     </button>
-                    </Link>
-                    </div>
-</MDBRow>
-                   
+                            </Link>
+                        </div>
+                    </MDBRow>
+
                 </MDBContainer>
 
             </div>

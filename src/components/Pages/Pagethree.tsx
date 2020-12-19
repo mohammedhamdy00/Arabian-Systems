@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
-import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
+import { Link } from 'react-router-dom';
 import LocalizedStrings from 'react-localization';
 export interface IState {
     enlistItem?: any[];

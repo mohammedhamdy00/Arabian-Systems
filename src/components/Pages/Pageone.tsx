@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import LocalizedStrings, { LocalizedStringsMethods } from 'react-localization';
+import LocalizedStrings from 'react-localization';
 export interface IState {
     enlistItem?: any[];
     arlistItem?: any[];
@@ -16,23 +16,23 @@ export interface IProps {
 }
 export class PageOne extends React.Component<IProps, IState> {
     constructor(props: IProps) {
-        let localen=JSON.parse(localStorage.getItem('english') || '{}');
-        let loaclenglish=localen.slice(0,10);
-        let localar=JSON.parse(localStorage.getItem('arabic') || '{}');
+        let localen = JSON.parse(localStorage.getItem('english') || '{}');
+        let loaclenglish = localen.slice(0, 10);
+        let localar = JSON.parse(localStorage.getItem('arabic') || '{}');
         super(props);
         this.state = {
             english: 'en',
             arabic: 'ar',
-            arList:localar,
-            engList:loaclenglish
+            arList: localar,
+            engList: loaclenglish
         }
     }
-        componentDidMount(): void {
+    componentDidMount(): void {
         const size = 10;
         const engItems = this.state.engList?.slice(0, size)
-         const arItems = this.state.arList?.slice(0, size)
+        const arItems = this.state.arList?.slice(0, size)
         this.setState({ enlistItem: engItems, arlistItem: arItems })
-        }
+    }
 
     public changeLaguage(languageKey: string) {
         let strings = new LocalizedStrings({
@@ -51,12 +51,12 @@ export class PageOne extends React.Component<IProps, IState> {
         return (
             <div>
                 <div className="langBtns">
-                <button className="langBtn" onClick={() => this.changeLaguage(this.state.arabic)}>
-                    <span>Ar</span>
-                </button>
-                <button className="langBtn" onClick={() => this.changeLaguage(this.state.english)}>
-                    <span>En</span>
-                </button>
+                    <button className="langBtn" onClick={() => this.changeLaguage(this.state.arabic)}>
+                        <span>Ar</span>
+                    </button>
+                    <button className="langBtn" onClick={() => this.changeLaguage(this.state.english)}>
+                        <span>En</span>
+                    </button>
                 </div>
                 {this.state.values ?
                     <div>
@@ -75,21 +75,21 @@ export class PageOne extends React.Component<IProps, IState> {
 
                 </div>
                 <div className="pageBtns">
-                <Link to={`pagetwo`} >
-                    <button className="navBtn">
-                        Go to Pagetwo
+                    <Link to={`pagetwo`} >
+                        <button className="navBtn">
+                            Go to Pagetwo
                     </button>
-                </Link>
-                <Link to={`pagethree`} >
-                    <button className="navBtn">
-                        Go to Pagethree
+                    </Link>
+                    <Link to={`pagethree`} >
+                        <button className="navBtn">
+                            Go to Pagethree
                     </button>
-                </Link>
-                <Link to={`/`} >
-                    <button className="navBtn">
-                        Go to Home
+                    </Link>
+                    <Link to={`/`} >
+                        <button className="navBtn">
+                            Go to Home
                     </button>
-                </Link>
+                    </Link>
                 </div>
             </div>
         )
