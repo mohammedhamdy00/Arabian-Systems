@@ -1,0 +1,43 @@
+.homeContainer{
+    min-height: 610px;
+    display: flex;
+    div[data-test="row"]{
+        width: 100%;
+        align-self: center;
+        margin: 0 auto;
+        .actionBtns{
+            text-align: center;
+            width: 100%; 
+         
+        }
+        }
+}
+.pageBtns{
+    width: 100%;
+text-align: center;
+
+}
+.langBtns{
+    width: 100%;
+text-align: right;
+margin-top: 1%;
+.langBtn{
+    border: none;
+    margin-right: 1%;
+    padding: 2px 1%;
+    cursor: pointer;
+}
+}
+.navBtn{    margin-right: 1%;
+    margin-right: 1%;
+border: none;
+padding: 1% 2%;
+background: #447a94;
+border-radius: 3px;
+font-family: 'Roboto';
+color: #fff !important;
+cursor: pointer;
+&:hover{
+background: #2b4b5a !important;
+}
+}
